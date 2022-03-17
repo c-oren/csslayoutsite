@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><title>CSS - 關於本站</title><meta name="viewport" content="width=600"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/code.css"><link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" type="text/css"><link rel="icon" type="image/png" href="../images/logo.png"></head><body class="ltr"><div id="logo"><a href="./index.html"><img src="../images/logo.png"> <span>學習 CSS 版面配置</span></a></div><div id="menu"><a class="home-link" href="./index.html">首頁</a> <a href="./toc.html">目錄</a></div><div id="container"><h1 class="content">關於本站</h1><style>.simple{width:500px;margin:20px auto;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.fancy{width:500px;margin:20px auto;padding:50px;border:solid #6ac5ac 10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}</style><p class="content">經過了幾個世代的轉變，人們意識到自己運算出元素的寬度實在很無趣，所以終於出現了一個叫做 <code>box-sizing</code> 的 CSS 屬性。當你設定一個元素樣式為 <code>box-sizing: border-box;</code>，這個元素的內距和邊框將不會增加元素本身的寬度。我們用跟上一頁一樣的例子，但我們將兩個元素都設定了 <code>box-sizing: border-box;</code> ：</p><figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.simple</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">-webkit-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+     <span class="nl">-moz-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+          <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.fancy</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="nb">solid</span> <span class="no">blue</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">-webkit-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+     <span class="nl">-moz-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+          <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure><div class="simple elem"><span class="label">&lt;div class="simple"></span><p>我們現在一樣大小了！</p><span class="endlabel">&lt;/div></span></div><div class="fancy elem"><span class="label">&lt;div class="fancy"></span><p>喔耶！</p><span class="endlabel">&lt;/div></span></div><p class="content">這樣寫好像沒有幫助多少，有些 CSS 開發人員想要將這個屬性套用到所有元素上，此時你可以將以下 CSS 樣式套用在頁面上：</p><figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">*</span> <span class="p">{</span>
+  <span class="nl">-webkit-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+     <span class="nl">-moz-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+          <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure><p class="content">這樣可以確保所有元素的寬度都可以用比較直觀的方式來定義。</p><p class="content">因為 <code>box-sizing</code> 算是個比較新的屬性，所以你還應該還是要加上我之前在例子中使用的 <code>-webkit-</code> 和 <code>-moz-</code> 前綴（Prefixes），這樣才能啟用特定瀏覽器實驗中的 CSS 特性。請記得該屬性從 <a href="http://caniuse.com/#search=box-sizing">IE8+</a> 之後就開始支援。</p><div class="nav-wrapper"><a class="nav prev" href="box-model.html">上一頁</a> <a class="nav next" href="position.html">下一頁</a></div><footer>6 / 19</footer></div></body></html>
